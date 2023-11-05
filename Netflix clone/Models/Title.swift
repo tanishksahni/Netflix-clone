@@ -9,11 +9,11 @@ import Foundation
 
 
 // Codable protocol: is an alias for encoder and decoder protocol
-struct TrendingMoviesResponse: Codable {
-    let results: [Movie]
+struct TrendingTitleResponse: Codable {
+    let results: [Title]
 }
 
-struct Movie: Codable {
+struct Title: Codable {
     let id: Int
     let media_type: String?
     let original_name: String?
