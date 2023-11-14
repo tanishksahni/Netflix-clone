@@ -91,4 +91,4 @@ iOSInjectionProject/
 
 
 #api kkeys
-/Managers/API_KEYS.swift
+API_KEYS.swift

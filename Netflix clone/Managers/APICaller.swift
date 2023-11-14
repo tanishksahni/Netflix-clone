@@ -151,6 +151,7 @@ class APICaller {
                 return
             }
             do {
+                
                 let results = try JSONDecoder().decode(TrendingTitleResponse.self, from: data)
                 completion(.success(results.results))
             }
