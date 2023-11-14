@@ -9,11 +9,13 @@ import Foundation
 
 struct Constants {
     
-    // these are the authentication keys
+    // these are the authentication key from tmdb
     static let API_KEY = "30176ea7a9f4ad826804e004bf3b843d"
-    static let ACCESS_TOKEN_AUTH = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlZWM4NGRmN2M4ZDQ1Nzc3ZWJiNjBjMWI1ZDUxOTlmZCIsInN1YiI6IjY1NDYxNjE1ZmQ0ZjgwMDEwMWI1ODBmYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.aOSIJcRh_aRXoRl88kPbQE1227PQxS5PwSWDlMxH03I"
     // this is the base url
     static let baseURL = "https://api.themoviedb.org"
+    // this is the youtube api key
+    static let YoutubeAPI_KEY = "AIzaSyDJ0KtOfwD-6KpEPyI6ZUfBUdxVU1nMQXQ"
+    static let YoutubeBaseURL = "https://youtube.googleapis.com/youtube/v3/search?"
 }
 
 enum APIError: Error {
@@ -163,4 +165,28 @@ class APICaller {
         // task is by default created in the pause status so we resume it
         task.resume()
     }
+    
+    
+    func getMovie(with query: String, completion: @escaping (Result<VideoElement, Error>) -> Void) {
+        
+        guard let query = query.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {return}
+        guard let url = URL(string: "\(Constants.YoutubeBaseURL)q=\(query)&key=\(Constants.YoutubeAPI_KEY)") else {return}
+        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) {data , _, error in
+            guard let data = data, error == nil else {
+                return
+            }
+            do {
+                let results = try JSONDecoder().decode(YoutubeSearchResponse.self, from: data)
+                completion(.success(results.items[0]))
+                }
+                catch {
+                    completion(.failure(error))
+                    print(error.localizedDescription)
+                    
+                }
+            }
+            // task is by default created in the pause status so we resume it
+            task.resume()
+    }
 }
+ 
