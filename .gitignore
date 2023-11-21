@@ -32,6 +32,7 @@ DerivedData/
 
 ##API Keys
 *.xcconfig
+API_Keys.xcconfig
 
 ## Playgrounds
 timeline.xctimeline
