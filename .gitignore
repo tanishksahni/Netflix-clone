@@ -30,6 +30,9 @@ DerivedData/
 *.dSYM.zip
 *.dSYM
 
+##API Keys
+*.xcconfig
+
 ## Playgrounds
 timeline.xctimeline
 playground.xcworkspace
@@ -89,6 +92,3 @@ fastlane/test_output
 
 iOSInjectionProject/
 
-
-#api kkeys
-API_KEYS.swift
