@@ -28,7 +28,6 @@ public enum API_KEYS {
         guard let apiKeyString = API_KEYS.infoDictionary[Keys.tmdbApiKey] as? String else {
             fatalError("TMDB API Key not set in plist")
         }
-        print(apiKeyString)
         return apiKeyString
     }()
     

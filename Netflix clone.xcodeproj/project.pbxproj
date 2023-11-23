@@ -29,6 +29,8 @@
 		CE9A05852AFDE2F600EB1278 /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9A05842AFDE2F600EB1278 /* TitleTableViewCell.swift */; };
 		CE9A05872AFEA68500EB1278 /* TitleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9A05862AFEA68500EB1278 /* TitleViewModel.swift */; };
 		CEA6375D2B0CE53700CF3ADD /* API_KEYS.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA6375C2B0CE53700CF3ADD /* API_KEYS.swift */; };
+		CEA6375F2B0DD52700CF3ADD /* TitlePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA6375E2B0DD52700CF3ADD /* TitlePreviewViewController.swift */; };
+		CEA637612B0DDC4300CF3ADD /* TitlePreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA637602B0DDC4300CF3ADD /* TitlePreviewViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +57,8 @@
 		CE9A05862AFEA68500EB1278 /* TitleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewModel.swift; sourceTree = "<group>"; };
 		CEA6375B2B0CD06400CF3ADD /* API_Keys.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = API_Keys.xcconfig; sourceTree = "<group>"; };
 		CEA6375C2B0CE53700CF3ADD /* API_KEYS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_KEYS.swift; sourceTree = "<group>"; };
+		CEA6375E2B0DD52700CF3ADD /* TitlePreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePreviewViewController.swift; sourceTree = "<group>"; };
+		CEA637602B0DDC4300CF3ADD /* TitlePreviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePreviewViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,9 +100,6 @@
 				CE4A483B2AF3BFAB001CD19A /* Views */,
 				CE4A483A2AF3BFA1001CD19A /* Models */,
 				CE4A482E2AF136E3001CD19A /* Controllers */,
-				CE4A481A2AF12B84001CD19A /* AppDelegate.swift */,
-				CE4A481C2AF12B84001CD19A /* SceneDelegate.swift */,
-				CE4A481E2AF12B84001CD19A /* MainTabBarViewController.swift */,
 				CE4A48232AF12B87001CD19A /* Assets.xcassets */,
 				CE4A48252AF12B87001CD19A /* LaunchScreen.storyboard */,
 				CE4A48282AF12B87001CD19A /* Info.plist */,
@@ -139,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				CE9A05862AFEA68500EB1278 /* TitleViewModel.swift */,
+				CEA637602B0DDC4300CF3ADD /* TitlePreviewViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -146,6 +148,8 @@
 		CE4A483D2AF3BFDC001CD19A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CE4A481C2AF12B84001CD19A /* SceneDelegate.swift */,
+				CE4A481A2AF12B84001CD19A /* AppDelegate.swift */,
 				CE7E72CB2AF6DAF000FA3D0D /* Extensions.swift */,
 			);
 			path = Resources;
@@ -165,6 +169,7 @@
 			children = (
 				CE4A48332AF14579001CD19A /* SearchViewController.swift */,
 				CE4A48312AF14554001CD19A /* UpcomingViewController.swift */,
+				CE4A481E2AF12B84001CD19A /* MainTabBarViewController.swift */,
 				CE4A48352AF1459D001CD19A /* DownloadsViewController.swift */,
 				CE4A482F2AF144F7001CD19A /* HomeViewController.swift */,
 			);
@@ -175,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				CE592F262B00A3E1009EF9A0 /* SearchResultsViewController.swift */,
+				CEA6375E2B0DD52700CF3ADD /* TitlePreviewViewController.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -273,6 +279,7 @@
 				CE4A48422AF3D265001CD19A /* HeroHeaderUIView.swift in Sources */,
 				CE4A48362AF1459D001CD19A /* DownloadsViewController.swift in Sources */,
 				CEA6375D2B0CE53700CF3ADD /* API_KEYS.swift in Sources */,
+				CEA6375F2B0DD52700CF3ADD /* TitlePreviewViewController.swift in Sources */,
 				CE4A481B2AF12B84001CD19A /* AppDelegate.swift in Sources */,
 				CE592F272B00A3E1009EF9A0 /* SearchResultsViewController.swift in Sources */,
 				CE7E72CC2AF6DAF000FA3D0D /* Extensions.swift in Sources */,
@@ -281,6 +288,7 @@
 				CE4A48322AF14554001CD19A /* UpcomingViewController.swift in Sources */,
 				CE7E72CA2AF6D4EC00FA3D0D /* Title.swift in Sources */,
 				CE4A48302AF144F7001CD19A /* HomeViewController.swift in Sources */,
+				CEA637612B0DDC4300CF3ADD /* TitlePreviewViewModel.swift in Sources */,
 				CE9A05872AFEA68500EB1278 /* TitleViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

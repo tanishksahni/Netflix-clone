@@ -26,7 +26,6 @@ class APICaller {
     //having a completion callback function
     func getTrendingMovies(completion: @escaping (Result<[Title], Error>) -> Void) {
         guard let url = URL(string: "\(Constants.baseURL)/3/trending/movie/day?api_key=\(API_KEYS.tmdbApiKey)") else {return}
-        print(url)
         let task = URLSession.shared.dataTask(with: URLRequest(url: url)) {data , _, error in
             guard let data = data, error == nil else {
                 return
