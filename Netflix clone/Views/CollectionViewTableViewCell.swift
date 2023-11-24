@@ -8,7 +8,7 @@
 import UIKit
 
 protocol CollectionViewTableViewCellDelegate: AnyObject {
-    func CollectionViewTableViewCellDidTapCell(_ cell: CollectionViewTableViewCell, viewModel: TitlePreviewViewModel)
+    func collectionViewTableViewCellDidTapCell(_ cell: CollectionViewTableViewCell, viewModel: TitlePreviewViewModel)
 }
 
 class CollectionViewTableViewCell: UITableViewCell {
@@ -99,7 +99,7 @@ extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionVie
                 
                 let viewModel = TitlePreviewViewModel(title: titleName , youtubeView: videoElement, titleOverview: titleOverview)
                 
-                self?.delegate?.CollectionViewTableViewCellDidTapCell(strongSelf, viewModel: viewModel )
+                self?.delegate?.collectionViewTableViewCellDidTapCell(strongSelf, viewModel: viewModel )
             
             
             case.failure(let error):
