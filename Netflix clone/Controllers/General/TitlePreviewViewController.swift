@@ -14,7 +14,6 @@ class TitlePreviewViewController: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .systemFont(ofSize:22, weight: .bold)
-        label.text = "Harry Potter"
         return label
     }()
     
@@ -23,7 +22,6 @@ class TitlePreviewViewController: UIViewController {
         label.font = .systemFont(ofSize: 18, weight: .regular)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0 /*defining it 0 means it can take multiple line and cannot be constrained to one/two lines*/
-        label.text = "best movie ever"
         return label
     }()
     
